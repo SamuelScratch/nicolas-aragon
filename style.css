@@ -1,0 +1,239 @@
+:root {
+    --clair: #F8F9FA;
+    --clair-1: #E9ECEF;
+    --clair-2: #DEE2E6;
+    --medium: #CED4DA;
+    --medium-1: #ADB5BD;
+    --medium-2: #6C757D;
+    --dark: #495057;
+    --dark-1: #343A40;
+    --dark-2: #212529;
+    --dark-3: #14181b;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    width: 300px;
+    z-index: 50;
+    display: flex;
+    color: var(--clair-2);
+    font-size: 20px;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-2);
+    height: 100vh;
+    width: 300px;
+}
+nav .item {
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.2s;
+}
+a {
+    text-decoration: unset;
+}
+
+.items a {
+    color: unset;
+}
+#bottom-nav {
+    padding: 10px;
+    font-size: 0.9rem;
+    flex-grow: 1;
+    vertical-align: bottom;
+    display: flex;
+    flex-direction: column-reverse;
+    color: var(--medium-1);
+    position: relative;
+}
+#bottom-nav > div {
+    position: absolute;
+}
+.item:hover {
+    background-color: var(--dark-1);
+}
+#close-button {
+    display: none;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 3px 2px 1px rgb(0, 0, 0, 0.10);
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+    grid-template-rows: 1;
+    grid-column: 2;
+    padding: 0 10px;
+    justify-content: space-around;
+    flex-flow: row;
+    margin-bottom: auto;
+}
+section article {
+    margin: 20px 10px 0px 10px;
+    padding: 15px;
+    box-shadow: 0px 0px 2px 1px rgb(0, 0, 0, 0.10);
+    border-radius: 5px;
+}
+footer {
+    margin-top: 20px;
+    padding: 20px;
+    border-top: solid 1px var(--medium);
+    color: var(--medium-2);
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    margin: auto 0;
+}
+h2 {
+    margin: 0;
+}
+
+.header-title p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.header-title {
+    margin: auto 0;
+    text-shadow: 0px 0px 3px rgb(0, 0, 0, 0.20);
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+}
+
+.photo {
+    background-color: var(--clair-2);
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
+    margin: 20px;
+    /* background-image: url("./nicolas-aragon.jpg"); */
+    background-size: contain;
+    box-shadow: 0px 0px 10px 2px rgb(0, 0, 0, 0.25);
+}
+
+.second-nav {
+    position: sticky;
+    color: var(--dark-1);
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 3px 2px 1px rgb(0, 0, 0, 0.10);
+    top: 0;
+    display: none;
+}
+
+.second-nav .material-icons {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* TABLET */
+
+@media only screen and (max-width: 992px) {
+    section {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-content: initial;
+    }
+    nav {
+        width: 250px;
+    }
+
+    .items {
+        width: 100vw;
+    }
+
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .photo {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+/* PHONES */
+
+@media only screen and (max-width: 620px) {
+    #close-button {
+        display: block;
+    }
+    header {
+        box-shadow: none;
+    }
+    .second-nav {
+        display: flex;
+    }
+
+    .responsive-hide {
+        width: 0;
+        position: fixed;
+        height: 100vh;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    .responsive-hide  .items * {
+        opacity: 0;
+    }
+    .responsive-show {
+        width: 100vw;
+    }
+
+    .responsive-show .items {
+        width: 70vw;
+    }
+    .responsive-show .items  *{
+        opacity: 1 ;
+    }
+
+    .responsive-show .blank-area {
+        background-color: rgba(0, 0, 0, 0.15);
+        height: 100vh;
+        width: 30vw;
+    }
+}
+
+/* GALAXY FOLD */
+@media only screen and (max-width: 300px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .photo {
+        height: 75px;
+        width: 75px;
+    }
+}
