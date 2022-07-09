@@ -34,6 +34,8 @@ nav {
     background-color: var(--dark-2);
     height: 100vh;
     width: 300px;
+    position: sticky;
+    top: 0;
 }
 nav .item {
     cursor: pointer;
@@ -153,7 +155,6 @@ h2 {
     cursor: pointer;
 }
 
-
 /* TABLET */
 
 @media only screen and (max-width: 992px) {
@@ -220,7 +221,7 @@ h2 {
     }
 
     .responsive-show .blank-area {
-        background-color: rgba(0, 0, 0, 0.15);
+        background-color: rgba(0, 0, 0, 0.25);
         height: 100vh;
         width: 30vw;
     }
