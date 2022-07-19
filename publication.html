@@ -61,7 +61,7 @@
                         </p>
                         <p>
                            <span ng-repeat="extra in publication.extras">
-                                <a ng-href="extra.link" ng-if="extra.type == 'link'" target="_blank">{{extra.title}}</a>
+                                <a ng-href="{{extra.link}}" ng-if="extra.type == 'link'" target="_blank">{{extra.title}}</a>
                            </span> 
                         </p>
                     </div>
