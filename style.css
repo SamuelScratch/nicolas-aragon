@@ -49,12 +49,10 @@ a {
 
 #bottom-nav {
     padding: 10px;
-    font-size: 0.9rem;
     flex-grow: 1;
     vertical-align: bottom;
     display: flex;
     flex-direction: column-reverse;
-    color: var(--medium-1);
     text-align: right;
 }
 
@@ -109,7 +107,7 @@ footer {
     margin-top: 20px;
     padding: 10px 10%;
     border-top: solid 1px var(--medium);
-    color: var(--medium-2);
+    color: var(--dark);
 }
 
 h1 {
